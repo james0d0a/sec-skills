@@ -1,0 +1,30 @@
+{
+  "name": "sec-skills",
+  "description": "Agent skills for cyber-security practitioners — investigation, hunting, detection engineering, threat modelling, and risk decisions, written to be tool-agnostic.",
+  "version": "0.1.0",
+  "author": {
+    "name": "James Dickenson"
+  },
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "incident-response",
+    "threat-hunting",
+    "detection-engineering",
+    "threat-modeling",
+    "dfir"
+  ],
+  "skills": [
+    "./skills/investigation/investigate",
+    "./skills/investigation/hunt",
+    "./skills/investigation/evidence",
+    "./skills/investigation/untrusted-artifacts",
+    "./skills/investigation/findings",
+    "./skills/investigation/detection-engineering",
+    "./skills/sec-architecture/threat-model",
+    "./skills/sec-architecture/risk-call",
+    "./skills/sec-architecture/environment-model",
+    "./skills/utility/ask-security",
+    "./skills/utility/setup-security-skills"
+  ]
+}
