@@ -30,6 +30,7 @@ Then **`/ask-security`** if you are unsure which skill fits the situation you ar
 ### Utility
 
 * **ask-security** — Ask which security skill or flow fits your situation. A router over the skills in this repo. *User-invoked.*
+* **rubber-duck** — Think a problem through in dialogue before any code gets written: read-only, one question at a time, so the problem gets sharpened before the agent starts solving it. *User-invoked.*
 * **setup-security-skills** — Configure this repo for the security skills. Run once before first use of the others. *User-invoked.*
 
 ## Status
