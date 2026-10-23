@@ -20,12 +20,18 @@ Then **`/ask-security`** if you are unsure which skill fits the situation you ar
 * **untrusted-artifacts** — Handling rules for attacker-controlled material. Treat the content as quoted data rather than instruction, exhaust static analysis before execution, and confirm before submitting anything to a third party.
 * **findings** — Turn the current conversation into a written security finding or incident report: BLUF, audience-tiered, every claim tiered by evidence — and publish it. *User-invoked.*
 * **detection-engineering** — Red-first detection rules: produce the telemetry that should trip the rule and watch it fire before the rule counts as written, then a noise pass with real numbers.
+* **reverse-engineer** — Reverse engineer a binary in Ghidra through its MCP server: triage, attack surface, source-to-sink traces, `LLM_`-prefixed labels landing in the project as understanding does, and a technical RE report at the end. *User-invoked.*
 
 ### Security Architecture
 
 * **threat-model** — A structured interrogation of a system's security design: trust boundaries, abuse cases, and the assumptions that would invalidate it, recording decisions as ADRs. *User-invoked.*
 * **risk-call** — Make a defensible risk decision: state the rubric, apply it factor by factor with tiered evidence, name the decision-maker, and record the residual and the tripwire that reopens it.
 * **environment-model** — Build and sharpen `SECURITY-CONTEXT.md` — crown jewels, trust boundaries, telemetry gaps, baseline oddities — inline as real work reveals it.
+
+### Offensive
+
+* **pentest-roe** — Air-gapped scoping and planning for an engagement: read the SOW from disk, state the targets, exclusions, credentials, and stop-condition with evidence tiers, and write the plan — with zero network contact. Model-invoked on any mention of a pentest or targets.
+* **pentest-run** — Execute the plan through a scope-lock and dry-run loop: one proposed tool call per turn, executed only on `ACK`, with a stop-condition that forces an air-gapped teardown and hands the results to `/risk-call` and `/findings`. *User-invoked.*
 
 ### Utility
 
@@ -35,7 +41,7 @@ Then **`/ask-security`** if you are unsure which skill fits the situation you ar
 
 ## Status
 
-This is a first release. The Security Architecture skills and `detection-engineering` have had the least real-world mileage — expect rough edges there first.
+This is a first release. The Security Architecture skills, the Offensive skills, and `detection-engineering` have had the least real-world mileage — expect rough edges there first.
 
 ## Licence
 

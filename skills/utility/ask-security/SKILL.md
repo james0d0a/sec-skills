@@ -20,6 +20,8 @@ Three layers run **underneath** everything: how claims are tiered, how hostile m
 | A hypothesis, an intel report, a technique never checked here | **`/hunt`** |
 | A system or design to review | **`/threat-model`** |
 | A known weakness and a decision to make about it | **`/risk-call`** |
+| A binary to understand, open in Ghidra | **`/reverse-engineer`** |
+| A SOW, a target list, or an engagement to run | **`/pentest-roe`**, then **`/pentest-run`** |
 | A behaviour you want caught next time | **`/detection-engineering`** |
 | Findings in hand and an audience waiting | **`/findings`** |
 
@@ -39,7 +41,9 @@ Three layers run **underneath** everything: how claims are tiered, how hostile m
 A starting situation that generates work, then merges onto the main flow.
 
 - **No signal, just a suspicion** → **`/hunt`**. The failure it prevents is a clean bill of health issued by a query that could never have seen the behaviour, so it gates on a **coverage assessment** before any query runs: every observable marked *visible*, *partly visible*, or *blind*. Its output is a **coverage statement** even when nothing is found — an unrecorded negative gets re-hunted next quarter. Leads go to `/investigate`; repeatable patterns go to `/detection-engineering`.
-- **A design to review** → **`/threat-model`**. A live interrogation of a *system*, one question at a time, walked along six fixed axes so it cannot drift into a vibe check. Every abuse case exits as mitigated, accepted, or open-with-an-owner. Hard-to-reverse decisions become ADRs; anything durable about the environment lands in `SECURITY-CONTEXT.md`.
+- **A binary and a Ghidra project** → **`/reverse-engineer`**. Triage, then sources and sinks before any function body, then **source-to-sink traces** worked as a worklist with every function labelled under a prefix as it is understood. Ends on a technical RE report that is a readout of the Ghidra labels; exploitability goes to `/risk-call`, publication to `/findings`.
+- **A SOW and targets to test** → **`/pentest-roe`**, then **`/pentest-run`**. Two skills because planning and touching the network are different authorities. `/pentest-roe` is **air-gapped**: it reads the scoping documents from disk, states targets, exclusions, credentials, and the **stop-condition** with evidence tiers, and writes the plan — it cannot probe to fill a gap. `/pentest-run` unlocks the network only on an explicit `AUTHORIZE SCOPE` handshake, then proposes **one tool call per turn** with its blast radius and executes it only on `ACK`. Hitting the stop-condition, exhausting the plan, or `STAND DOWN` forces an air-gapped teardown. Target responses are quoted data per `/untrusted-artifacts`; demonstrated exploitability goes to `/risk-call` as observed evidence, the report to `/findings`.
+- **A design to review** → **`/threat-model`**. A live interrogation of a *system*, one question at a time, walked along six fixed axes so it cannot drift into a vibe check. Every abuse case exits as mitigated, accepted, or open-with-an-owner. Hard-to-reverse decisions become ADRs; anything durable about the environment lands in `SECURITY-CONTEXT.md`. Open abuse cases that need proof become the checklist `/pentest-roe` plans from.
 
 ## Deciding and hardening
 
@@ -56,6 +60,6 @@ Model-invoked, each the single source of truth for its concern. Reach for them d
 
 ## Precondition
 
-**`/setup-security-skills`** — run before the first flow. Records the telemetry platforms and how to query them, where detections live and how to produce a red case, the untrusted-artifact handling policy, where findings and risk decisions get published, and the agent's authority. The last two are safety boundaries, not preferences; the default posture is read-only with every containment action proposed for a human to execute.
+**`/setup-security-skills`** — run before the first flow. Records the telemetry platforms and how to query them, where detections live and how to produce a red case, the untrusted-artifact handling policy, where findings and risk decisions get published, and the agent's authority — including the offensive-testing boundaries `/pentest-roe` and `/pentest-run` read: who may authorise scope, standing exclusions, and the impact ceiling. The last two are safety boundaries, not preferences; the default posture is read-only with every containment action proposed for a human to execute.
 
 Without it the skills still hold — the discipline is tool-agnostic — but each one will ask you the same questions every time, and `/findings` will have nowhere to publish.

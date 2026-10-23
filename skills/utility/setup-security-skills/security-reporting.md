@@ -9,6 +9,7 @@ Where security writing gets published. Read by `/findings` and `/risk-call`.
 - **Risk register** (an accepted or deferred risk): {location, and the format if it is a table}
 - **Hunt coverage statements** (the negative that must survive to next quarter): {location}
 - **Detection tickets**: {where a "we should detect this" item goes, and who grooms it}
+- **Pentest reports** (from `/pentest-run`, written by `/findings`): {location — often client-facing with its own distribution rules; say so}
 
 If this repo already has an issue tracker configured for engineering work, reusing it is usually right — say here whether that is what happened, since access to a security finding is often narrower than access to an engineering issue.
 

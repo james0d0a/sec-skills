@@ -36,6 +36,8 @@ Each abuse case leaves the session in exactly one state, and the states are the 
 - **Accepted** — a decision, not a shrug: the reasoning is written down and a decision-maker is named.
 - **Open** — work to be done, with an owner.
 
+An open abuse case whose exploitability is disputed is a test, not a debate — hand it to `/pentest-roe` as a checklist item.
+
 Then, before finishing:
 
 - Record decisions that are hard to reverse, surprising without context, and the result of a real trade-off as ADRs (format below). A decision that is none of those three does not need one.

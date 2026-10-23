@@ -29,6 +29,17 @@ Actions the agent **may** take unaided, if any. Empty is a valid and recommended
 
 - {action} — authorised by {name}, on {date}, bounded to {scope}
 
+## Offensive testing
+
+Read by `/pentest-roe` and `/pentest-run`. Nothing here substitutes for the engagement's own signed RoE; it records the standing rules that apply to every engagement, so the per-engagement SOW only has to say what differs.
+
+- **Who may issue `AUTHORIZE SCOPE`**: {role — the person whose handshake unlocks network contact}
+- **Where scoping documents live**: {path or system — SOW, RoE, target lists}
+- **Standing exclusions**: {hosts, ranges, or systems never in scope regardless of SOW — e.g. production OT, third-party-hosted services}
+- **Impact ceiling**: {the default stop-condition — e.g. demonstrate access, never exfiltrate; halt on any customer or safety-system data}
+- **Blast radius requiring a second confirmation**: {Intrusive, State-Changing, or both — `Read-Only` proposals still require `ACK`}
+- **Testing windows**: {hours, change-freeze rules, who to notify before and after}
+
 ## Escalation
 
 - **Suspected compromise**: {path}

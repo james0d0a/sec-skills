@@ -79,6 +79,8 @@ Default posture, and the one to recommend: **read-only. Every containment action
 
 Record the systems that are **in scope** to query at all. An agent that queries a system it was not authorised to touch has created an incident rather than investigated one.
 
+If offensive testing happens here, also capture the standing rules `/pentest-roe` and `/pentest-run` read: who may issue the `AUTHORIZE SCOPE` handshake, where scoping documents live, standing exclusions, the default impact ceiling, and which blast-radius classes need a second confirmation. If it does not, record that offensive testing is not authorised, so `/pentest-run` refuses rather than asks.
+
 ### 3. Confirm and edit
 
 Show a draft of the `## Security skills` block and all five docs files. Let the user edit before anything is written. Read Sections C and E back to them explicitly — those two are the ones that cause harm when wrong.

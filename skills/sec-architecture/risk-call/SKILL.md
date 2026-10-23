@@ -25,7 +25,7 @@ Done when the sentence exists. If the answer is "nobody has to decide anything",
 
 The rubric is **exploitability × exposure × asset value**. Each factor gets a level *and* the sentence that justifies it, tiered.
 
-- **Exploitability** — what the adversary must already have: network position, credentials, a user's click, a race won. Whether working exploit code is public. Whether they need to be lucky more than once. `[Reported by X]` when it rests on a vendor's or researcher's claim.
+- **Exploitability** — what the adversary must already have: network position, credentials, a user's click, a race won. Whether working exploit code is public. Whether they need to be lucky more than once. `[Reported by X]` when it rests on a vendor's or researcher's claim; `[Observed]` when `/pentest-run` demonstrated it, anchored to the logged tool output.
 - **Exposure** — where the thing sits relative to the trust boundaries that actually hold. Reachable from the internet, or from a segment that turned out to be flat, or only by someone who is already domain admin. This factor is where a generic score is most often wrong in your favour, and occasionally wrong against you.
 - **Asset value** — the crown jewel behind it, and the **loss mode**: read, altered, destroyed, or merely unavailable. These are not interchangeable, and the reader's currency differs for each: notification obligations, corrupted books, downtime.
 

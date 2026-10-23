@@ -12,7 +12,9 @@
     "threat-hunting",
     "detection-engineering",
     "threat-modeling",
-    "dfir"
+    "dfir",
+    "reverse-engineering",
+    "pentest"
   ],
   "skills": [
     "./skills/investigation/investigate",
@@ -21,9 +23,12 @@
     "./skills/investigation/untrusted-artifacts",
     "./skills/investigation/findings",
     "./skills/investigation/detection-engineering",
+    "./skills/investigation/reverse-engineer",
     "./skills/sec-architecture/threat-model",
     "./skills/sec-architecture/risk-call",
     "./skills/sec-architecture/environment-model",
+    "./skills/offensive/pentest-roe",
+    "./skills/offensive/pentest-run",
     "./skills/utility/ask-security",
     "./skills/utility/setup-security-skills"
   ]
