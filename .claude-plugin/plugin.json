@@ -30,6 +30,7 @@
     "./skills/offensive/pentest-roe",
     "./skills/offensive/pentest-run",
     "./skills/utility/ask-security",
+    "./skills/utility/cyber-lab",
     "./skills/utility/setup-security-skills"
   ]
 }

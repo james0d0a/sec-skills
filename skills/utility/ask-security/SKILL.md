@@ -23,6 +23,7 @@ Three layers run **underneath** everything: how claims are tiered, how hostile m
 | A binary to understand, open in Ghidra | **`/reverse-engineer`** |
 | A SOW, a target list, or an engagement to run | **`/pentest-roe`**, then **`/pentest-run`** |
 | A behaviour you want caught next time | **`/detection-engineering`** |
+| A lab to build, a scenario to run, or a dataset to evaluate | **`/cyber-lab`** |
 | Findings in hand and an audience waiting | **`/findings`** |
 
 ## The main flow: signal → verdict → written up
